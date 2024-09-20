@@ -1,0 +1,122 @@
+/**
+ * Product Suggest
+ * @copyright Copyright 2003-2018 Zen Cart Development Team
+ * @copyright Portions Copyright 2003 osCommerce
+ * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
+ * @Author: Will Davies Vasconcelos <willvasconcelos@outlook.com>
+ * @Version: 1.0
+ * @Release Date: Monday, May 10 2018 PST
+ * @Tested on Zen Cart v1.5.5 $
+ */
+@charset "utf-8";
+#suggestbx {
+    width: 40%;
+	max-width:530px;
+    z-index: 2;
+    position: absolute;
+    top: -500px;
+    left: -500px;
+    background-color: White;
+    border: 1px solid Gray;
+}
+.pline {
+    height: 42px;
+    cursor: pointer;
+	border-bottom:dotted 1px Silver;
+	background-color:white;
+}
+.pline_on{
+    height: 42px;
+    cursor: pointer;
+	border-bottom:dotted 1px Silver;
+	background-color:Gainsboro;
+}
+.pimg{
+	height:38px;
+	width:38px;
+	overflow: hidden;
+	float:left;
+	margin:1px;
+	background-color:White;
+	border:solid 1px Gainsboro;
+	border-radius:3px;
+}
+.pimg img{
+    margin: auto; 
+    max-height:100%;
+    max-width:100%;
+}
+.pname{
+	width:85%;
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size:14px;
+	font-weight:bold;
+	color:SlateGray; /* #F25603 */
+	margin:3px 0 0 5px;
+	padding:0;
+}
+.pdesc{
+	width:85%;
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size:11px;
+	font-weight:normal;
+	color:gray;
+	margin:0 0 0 5px;
+	padding:0;
+}
+#cs {
+    text-align: right;
+    font-size: 14px;
+    height: 20px;
+	line-height:20px;
+    cursor: pointer;
+    position: relative;
+	margin-right:5px;
+    z-index: 6
+}
+@media (max-width: 800px) {
+	.pname{
+		width:80%;
+	}
+	.pdesc{
+		width:80%;
+	}
+}
+@media (max-width: 767px) {
+	.pimg{
+		display:none;
+	}
+	.pimg img{
+		display:none;
+	}
+	.pname{
+		width:100%;
+	}
+	.pdesc{
+		width:100%;
+	}
+}
+
+@media (max-width: 480px) {
+    #suggestbx {
+    	width: 70%;
+    } 
+} 
+	
+@media (max-width: 350px) {  
+	.pname{
+		font-size:11px;
+	}
+	.pdesc {
+		font-size:10px;
+	}
+	.pline {
+    	height:35px;
+	}
+}
